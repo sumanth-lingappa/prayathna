@@ -1,0 +1,13 @@
+# Sumanth
+alias vi=vim
+alias gitclone='git clone <url>'
+alias bashrc='vi ~/.bashrc'
+alias vimrc='vi ~/.vimrc'
+
+TERM=xterm
+export TERM
+
+
+clear
+echo "                                     Hello Sumanth! Have a great day!"
+echo ""

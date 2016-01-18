@@ -1,0 +1,13 @@
+syntax on
+filetype indent plugin on
+
+set modeline
+set tabstop=4 expandtab shiftwidth=4 softtabstop=4
+set background=dark
+set nu
+set nowrap
+set hlsearch
+set ignorecase
+set paste
+
+
