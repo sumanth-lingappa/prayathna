@@ -2,6 +2,7 @@ __author__ = 'Sumanth_Lingappa'
 
 '''
 count the number of days between two dates.
+Ref : www.geeksforgeeks.org/find-number-of-days-between-two-given-dates/
 '''
 
 
