@@ -12,5 +12,5 @@ class TestFindMissingAP(unittest.TestCase):
   def test_mix(self):
       self.assertEqual(0, findMissing([-5, 5, 10, 15]))
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

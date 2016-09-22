@@ -1,4 +1,4 @@
-__author__ = 'Sumanth_Lingappa'
+__author__ = "Sumanth_Lingappa"
 
 
 def initializeTable(length):
@@ -27,4 +27,5 @@ def largestPalind(s):
 
 
 
-print largestPalind('forgeeksskeegfor')
+print largestPalind("forgeeksskeegfor")
+print largestPalind("iamsumanthhtnamusiam")

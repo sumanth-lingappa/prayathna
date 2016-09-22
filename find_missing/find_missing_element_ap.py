@@ -31,6 +31,6 @@ def findMissing(seq):
         missing = seq[-1] + step
     return missing
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print findMissing([-5, 0, 5, 10, 15])
 

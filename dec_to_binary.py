@@ -1,4 +1,4 @@
-__author__ = 'Sumanth_Lingappa'
+__author__ = "Sumanth_Lingappa"
 
 # Python program to convert decimal number into binary number using recursive function
 

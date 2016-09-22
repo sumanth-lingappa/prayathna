@@ -1,4 +1,4 @@
-__author__ = 'Sumanth_Lingappa'
+__author__ = "Sumanth_Lingappa"
 
 import sys
 
@@ -15,4 +15,4 @@ def powerSet(s):
     return sorted(pSet, key=len)
 
 
-#print powerSet('abc')
+print powerSet('abc')

@@ -1,52 +1,84 @@
 import random
 import os
-def parse(hangman,let):
+
+
+def parse(hangman, let):
     return [i for (i, ltr) in enumerate(hangman) if ltr == let]
 
-def printHangman(hangman,ind):
+
+def printHangman(hangman, ind):
     hgm = ''
     for i in range(len(hangman)):
         if i in ind:
-            hgm += ' ' + hangman[i]
+            hgm += " " + hangman[i]
         else:
-            hgm += ' _'
+            hgm += " _"
     return hgm
 
-def updateInd(ind,newInd):
+
+def updateInd(ind, newInd):
     for i in range(len(newInd)):
         if newInd[i] not in ind:
             ind.append(newInd[i])
-            print 'updateInd',ind
-
+            # print "updateInd", ind
 
 
 def main():
+    names = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua andBarbuda", "Argentina",
+             "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados",
+             "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia andHerzegovina",
+             "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi",
+             "Cambodia", "Cameroon", "Cape Verde", "Cayman Islands", "Chad", "Chile", "China", "Colombia", "Congo",
+             "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cruise Ship", "Cuba", "Cyprus",
+             "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt",
+             "El Salvador", "Equatorial Guinea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji",
+             "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany",
+             "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea",
+             "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia",
+             "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan",
+             "Kazakhstan", "Kenya", "Kuwait", "Kyrgyz Republic", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia",
+             "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi",
+             "Malaysia", "Maldives", "Mali", "Malta", "Mauritania", "Mauritius", "Mexico", "Moldova", "Monaco",
+             "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Namibia", "Nepal", "Netherlands",
+             "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman",
+             "Pakistan", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland",
+             "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre and Miquelon",
+             "Samoa", "San Marino", "Satellite", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone",
+             "Singapore", "Slovakia", "Slovenia", "South Africa", "South Korea", "Spain", "Sri Lanka",
+             "St Kitts andNevis", "St Lucia", "St Vincent", "St. Lucia", "Sudan", "Suriname", "Swaziland", "Sweden",
+             "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor Leste", "Togo", "Tonga",
+             "Trinidad andTobago", "Tunisia", "Turkey", "Turkmenistan", "Turks andCaicos", "Uganda", "Ukraine",
+             "United Arab Emirates", "United Kingdom", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam",
+             "Virgin Islands", "Yemen", "Zambia", "Zimbabwe"]
 
-    names = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua andBarbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia andHerzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kuwait","Kyrgyz Republic","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Mauritania","Mauritius","Mexico","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Namibia","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Norway","Oman","Pakistan","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre andMiquelon","Samoa","San Marino","Satellite","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","South Africa","South Korea","Spain","Sri Lanka","St Kitts andNevis","St Lucia","St Vincent","St. Lucia","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad andTobago","Tunisia","Turkey","Turkmenistan","Turks andCaicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
-
-
-
-
-    i = random.randint(0,len(names)-1)
-
-
+    i = random.randint(0, len(names) - 1)
 
     hangman = names[i].lower()
 
-    print ' _'*len(hangman)
+    print " _" * len(hangman)
     ind = []
     while True:
-        let = raw_input('Enter a letter : ')
+        let = raw_input("Enter a letter : ")
 
-        newInd = parse(hangman,let)
-        updateInd(ind,newInd)
+        newInd = parse(hangman, let)
+        updateInd(ind, newInd)
         os.system('cls')
-        print printHangman(hangman,ind)
+        print printHangman(hangman, ind)
 
         if len(ind) >= len(hangman):
             break
 
-    print 'Congrats!!!!!'
+    print "Congrats!!!!!"
 
-if __name__ == '__main__':
+
+def rules():
+    print 'RULES:'
+    print '1. All Countries are in small letters..'
+    print '2. Type one letter at a time and then press ENTER..'
+    print '3. There are no MAX tries..!'
+    print 'All the best!!'
+
+if __name__ == "__main__":
+    rules()
     main()
+    raw_input('Hit any key to exit..!')

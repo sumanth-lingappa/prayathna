@@ -60,7 +60,7 @@ def numOfDays(d1, d2):
     return abs(numDay1 - numDay2) + 1 # Including the dates
 
 
-d1 = Date(1, 1, 2000)
-d2 = Date(31, 12, 2001)
+d1 = Date(28, 2, 2000)
+d2 = Date(1, 3, 2000)
 
 print numOfDays(d1, d2)
