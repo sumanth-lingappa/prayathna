@@ -1220,7 +1220,8 @@ $#_}*!(+([_&%{^&[([%]}*^{{([@+@]@*&@_!]_+([(#&!]]#$$#]@#{_]][_{@]{*))$({%}_![@$]
 #@}&$[[%]_&$+)$!%{(}$^$}*"""
 
 
-
+import sys
 for letter in data:
     if letter.isalpha():
-        print letter
+        print sys.stdout.write(letter)
+        # print letter

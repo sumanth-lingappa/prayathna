@@ -1,0 +1,4 @@
+DEBUG:root:entered foo called with args=() and kwargs={}
+DEBUG:root:entered somefunc called with args=('abc',) and kwargs={}
+DEBUG:root:exited somefunc
+DEBUG:root:exited foo

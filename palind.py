@@ -1,4 +1,4 @@
-__author__ = "Sumanth_Lingappa"
+__author__ = 'Sumanth_Lingappa'
 
 
 def isPalindrome(s):
@@ -11,4 +11,4 @@ def isPalindrome(s):
 
 
 
-#print isPalindrome('suus')
+print isPalindrome('suus')

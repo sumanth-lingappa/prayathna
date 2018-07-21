@@ -1,4 +1,4 @@
-__author__ = "Sumanth_Lingappa"
+__author__ = 'Sumanth_Lingappa'
 
 def numDigits(n):
     return len(str(abs(n)))

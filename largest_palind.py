@@ -1,11 +1,12 @@
-__author__ = "Sumanth_Lingappa"
-
+__author__ = 'Sumanth_Lingappa'
+import pprint
 
 def initializeTable(length):
     return [[False for i in range(length)] for j in range(length)]
 
 def largestPalind(s):
     table = initializeTable(len(s))
+    print 'table is {}'.format(pprint.pprint(table))
     longPalindr = ''
 
     for i in range(len(s)):
@@ -27,5 +28,4 @@ def largestPalind(s):
 
 
 
-print largestPalind("forgeeksskeegfor")
-print largestPalind("iamsumanthhtnamusiam")
+print largestPalind('forgeeksskeegfor')

@@ -1,4 +1,4 @@
-__author__ = "Sumanth_Lingappa"
+__author__ = 'Sumanth_Lingappa'
 
 
 def angleHourMin(hour,minute):
@@ -12,4 +12,4 @@ def angleHourMin(hour,minute):
     return abs(hourAngle - minuteAngle)
 
 
-print angleHourMin(3,30)
+print angleHourMin(7,24)
