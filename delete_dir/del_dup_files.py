@@ -12,14 +12,17 @@ def hashfile(path, blocksize = 65536):
         buf = afile.read
 
 for dirpath, dirnames, filenames in os.walk(path):
-    print dirpath
-    print dirnames
-    print filenames
-    print ''
+    # print dirpath
+    # print dirnames
+    # print filenames
+    # print ''
 
+    print 'size:\tfp'
     for f in filenames:
         fp = os.path.join(dirpath, f)
-        total_size += os.path.getsize(fp)
+        tmp_size = os.path.getsize(fp)
+        print '{}:\t{}'.format(tmp_size, fp)
+        total_size += tmp_size
 
 print "total size of directory is {}".format(total_size)
 

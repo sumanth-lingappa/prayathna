@@ -1,3 +1,8 @@
+"""
+Find the missing element in the Arithmetic Progression in the list given
+If no element is missing, return the next item in the sequence
+
+"""
 def findStep(sequence):
     first = sequence[0]
     second = sequence[1]
@@ -14,7 +19,6 @@ def findMissing(seq):
     step = findStep(seq)
     start = 0
     end = len(seq) - 1
-    middle = (end - start)/2
     missing = -1
 
     while start <= end:
